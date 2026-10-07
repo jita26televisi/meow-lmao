@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Junior Eurovision Song Contest Results, 2003–2025</title>
+<meta name="description" content="Every Junior Eurovision Song Contest result from 2003 to 2025, with jury and online-vote points where they exist.">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#faf8ff;--card:#fff;--ink:#201a33;--mute:#6d6785;--line:#e6e1f2;--a:#7a2bd6;--j:#2f6fe0;--t:#e0522f}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15121f;--card:#1e1a2c;--ink:#eeeaf8;--mute:#a49ebd;--line:#312b46;--a:#b98aff;--j:#6ea0ff;--t:#ff8a68}}
+:root[data-theme="dark"]{--bg:#15121f;--card:#1e1a2c;--ink:#eeeaf8;--mute:#a49ebd;--line:#312b46;--a:#b98aff;--j:#6ea0ff;--t:#ff8a68}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,'Segoe UI',sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:1.9rem;margin:0 0 4px;letter-spacing:-.5px}
+h1 span{color:var(--a)}
+.sub{color:var(--mute);margin:0 0 18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:0 0 18px}
+h2{font-size:1.15rem;margin:0 0 10px}
+.ctl{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+.ctl label{font-size:.8rem;color:var(--mute)}
+select,button{font:inherit;font-size:.88rem;padding:7px 12px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;cursor:pointer}
+button.on{background:var(--a);border-color:var(--a);color:#fff}
+.sc{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:520px}
+th,td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th{font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:var(--mute)}
+th:nth-child(1),th:nth-child(2),td:nth-child(1),td:nth-child(2){text-align:left}
+td:first-child{color:var(--mute);width:2em}
+.cc{display:inline-block;font-size:.65rem;color:var(--mute);border:1px solid var(--line);border-radius:4px;padding:0 4px;margin-left:6px;vertical-align:middle}
+.fl{font-size:1.15rem;display:inline-block;min-width:1.5em}
+.fi{height:1.05em;width:auto;border:1px solid var(--line);border-radius:2px;vertical-align:-2px}
+.bar{display:inline-block;height:6px;border-radius:3px;vertical-align:middle;margin-right:6px}
+.hl{font-weight:700}
+.comb th:nth-child(3),.comb td:nth-child(3),.comb th:nth-child(4),.comb td:nth-child(4){display:none}
+button:disabled{opacity:.4;cursor:not-allowed}
+.note{font-size:.82rem;color:var(--mute);margin:10px 0 0}
+td.w{white-space:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Junior Eurovision <span>Results</span></h1>
+<p class="sub">All winners and every entry\u2019s points for each contest, 2003–2025, with jury and online-vote breakdowns where they exist.</p>
+
+<section class="card">
+<h2>Jury vs. televote</h2>
+<div class="ctl">
+<label for="yr">Contest</label><select id="yr"></select>
+<label>Sort by</label><span id="btns"></span>
+<button id="dir">High → Low</button>
+</div>
+<div class="sc"><table id="tbl"><thead id="th"></thead><tbody id="rows"></tbody></table></div>
+<p class="note" id="nt"></p>
+</section>
+
+<section class="card">
+<h2>All winners, 2003–2025</h2>
+<div class="sc"><table><thead><tr><th>Year</th><th>Country</th><th style="text-align:left">Artist</th><th style="text-align:left">Song</th></tr></thead><tbody id="win"></tbody></table></div>
+<p class="note">France and Georgia lead with four wins each. Malta, Poland, Russia, Belarus and Armenia have two each. Every entry\u2019s points are in the table above for every contest from 2003 to 2025.</p>
+</section>
+
+<p class="note">Flags are loaded from Wikimedia Commons (free licences; see each file page for attribution). If an image fails to load, an emoji flag is shown instead. Totals are jury plus online vote from 2017 on; earlier years use the combined score or the jury types shown for that contest. Data comes from the Wikipedia articles for each contest.</p>
+<footer class="note" style="margin-top:22px;border-top:1px solid var(--line);padding-top:12px"><b>Sources and credits.</b> Results are compiled from the English Wikipedia article for each Junior Eurovision Song Contest, text available under <a href="https://creativecommons.org/licenses/by-sa/4.0/" style="color:var(--a)">CC BY-SA 4.0</a>; check them against the official scoreboards at <a href="https://junioreurovision.tv" style="color:var(--a)">junioreurovision.tv</a>. Flags: <a href="https://commons.wikimedia.org" style="color:var(--a)">Wikimedia Commons</a>. This is an unofficial fan project and is not affiliated with or endorsed by the European Broadcasting Union.</footer>
+</div>
+<script>
+const fl=c=>c=="CS"?"":c=="WA"?"\u{1F3F4}\u{E0067}\u{E0062}\u{E0077}\u{E006C}\u{E0073}\u{E007F}":[...c].map(x=>String.fromCodePoint(127397+x.charCodeAt(0))).join("");
+window.ef=fl;
+const FN={"AL": "Flag_of_Albania.svg", "AM": "Flag_of_Armenia.svg", "AU": "Flag_of_Australia.svg", "AZ": "Flag_of_Azerbaijan.svg", "BE": "Flag_of_Belgium.svg", "BG": "Flag_of_Bulgaria.svg", "BY": "Flag_of_Belarus.svg", "CH": "Flag_of_Switzerland.svg", "CY": "Flag_of_Cyprus.svg", "DE": "Flag_of_Germany.svg", "DK": "Flag_of_Denmark.svg", "EE": "Flag_of_Estonia.svg", "ES": "Flag_of_Spain.svg", "FR": "Flag_of_France.svg", "GB": "Flag_of_the_United_Kingdom.svg", "GE": "Flag_of_Georgia.svg", "GR": "Flag_of_Greece.svg", "HR": "Flag_of_Croatia.svg", "IE": "Flag_of_Ireland.svg", "IL": "Flag_of_Israel.svg", "IT": "Flag_of_Italy.svg", "KZ": "Flag_of_Kazakhstan.svg", "LT": "Flag_of_Lithuania.svg", "LV": "Flag_of_Latvia.svg", "MD": "Flag_of_Moldova.svg", "ME": "Flag_of_Montenegro.svg", "MK": "Flag_of_North_Macedonia.svg", "MT": "Flag_of_Malta.svg", "NL": "Flag_of_the_Netherlands.svg", "NO": "Flag_of_Norway.svg", "PL": "Flag_of_Poland.svg", "PT": "Flag_of_Portugal.svg", "RO": "Flag_of_Romania.svg", "RS": "Flag_of_Serbia.svg", "RU": "Flag_of_Russia.svg", "SE": "Flag_of_Sweden.svg", "SI": "Flag_of_Slovenia.svg", "SM": "Flag_of_San_Marino.svg", "UA": "Flag_of_Ukraine.svg", "WA": "Flag_of_Wales.svg", "CS": "Flag_of_Serbia_and_Montenegro_(1992–2006).svg"};
+const fi=c=>FN[c]?`<img class="fi" src="https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(FN[c])}?width=48" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML=ef('${c}')">`:ef(c);
+// n country, c ISO, j jury, t televote (null if unverified)
+const D={
+2003:{c:1,note:"Copenhagen, 15 Nov 2003 · Televote only. Spain\u2019s Sergio finished 2nd.",r:[["Greece","GR",null,null,53],["Croatia","HR",null,null,134],["Cyprus","CY",null,null,16],["Belarus","BY",null,null,103],["Latvia","LV",null,null,37],["North Macedonia","MK",null,null,19],["Poland","PL",null,null,3],["Norway","NO",null,null,18],["Spain","ES",null,null,125],["Romania","RO",null,null,35],["Belgium","BE",null,null,83],["United Kingdom","GB",null,null,118],["Denmark","DK",null,null,93],["Sweden","SE",null,null,12],["Malta","MT",null,null,56],["Netherlands","NL",null,null,23]]},
+2004:{c:1,note:"Lillehammer, 20 Nov 2004 · Televote only.",r:[["Greece","GR",null,null,48],["Malta","MT",null,null,14],["Netherlands","NL",null,null,27],["Switzerland","CH",null,null,4],["Norway","NO",null,null,12],["France","FR",null,null,78],["North Macedonia","MK",null,null,64],["Poland","PL",null,null,3],["Cyprus","CY",null,null,61],["Belarus","BY",null,null,9],["Croatia","HR",null,null,126],["Latvia","LV",null,null,3],["United Kingdom","GB",null,null,140],["Denmark","DK",null,null,116],["Spain","ES",null,null,171],["Sweden","SE",null,null,8],["Belgium","BE",null,null,37],["Romania","RO",null,null,123]]},
+2005:{c:1,note:"Hasselt, 26 Nov 2005 · Televote only. Cyprus withdrew but still voted.",r:[["Greece","GR",null,null,88],["Denmark","DK",null,null,121],["Croatia","HR",null,null,36],["Romania","RO",null,null,89],["United Kingdom","GB",null,null,28],["Sweden","SE",null,null,22],["Russia","RU",null,null,66],["North Macedonia","MK",null,null,68],["Netherlands","NL",null,null,82],["Serbia and Montenegro","CS",null,null,29],["Latvia","LV",null,null,50],["Belgium","BE",null,null,63],["Malta","MT",null,null,18],["Norway","NO",null,null,123],["Spain","ES",null,null,146],["Belarus","BY",null,null,149]]},
+2006:{c:1,note:"Bucharest, 2 Dec 2006 · Televote only. Serbia\u2019s first entry as an independent country.",r:[["Portugal","PT",null,null,22],["Cyprus","CY",null,null,58],["Netherlands","NL",null,null,44],["Romania","RO",null,null,80],["Ukraine","UA",null,null,58],["Spain","ES",null,null,90],["Serbia","RS",null,null,81],["Malta","MT",null,null,48],["North Macedonia","MK",null,null,14],["Sweden","SE",null,null,116],["Greece","GR",null,null,35],["Belarus","BY",null,null,129],["Belgium","BE",null,null,71],["Croatia","HR",null,null,50],["Russia","RU",null,null,154]]},
+2007:{c:1,note:"Rotterdam, 8 Dec 2007 \u00b7 Televote only. Belarus beat Armenia by a single point.",r:[["Georgia","GE",null,null,116],["Belgium","BE",null,null,19],["Armenia","AM",null,null,136],["Cyprus","CY",null,null,29],["Portugal","PT",null,null,15],["Russia","RU",null,null,105],["Romania","RO",null,null,54],["Bulgaria","BG",null,null,86],["Serbia","RS",null,null,120],["Netherlands","NL",null,null,39],["North Macedonia","MK",null,null,111],["Ukraine","UA",null,null,56],["Sweden","SE",null,null,83],["Malta","MT",null,null,37],["Greece","GR",null,null,14],["Lithuania","LT",null,null,33],["Belarus","BY",null,null,137]]},
+2008:{c:1,note:"Limassol, 22 Nov 2008 \u00b7 First year with a 50% jury / 50% televote blend (Ukraine used jury only).",r:[["Romania","RO",null,null,58],["Armenia","AM",null,null,59],["Belarus","BY",null,null,86],["Russia","RU",null,null,73],["Greece","GR",null,null,19],["Georgia","GE",null,null,154],["Belgium","BE",null,null,45],["Bulgaria","BG",null,null,15],["Serbia","RS",null,null,37],["Malta","MT",null,null,100],["Netherlands","NL",null,null,27],["Ukraine","UA",null,null,135],["Lithuania","LT",null,null,103],["North Macedonia","MK",null,null,93],["Cyprus","CY",null,null,46]]},
+2009:{c:1,note:"Kyiv, 21 Nov 2009 \u00b7 50% jury / 50% televote blend (Sweden used jury only). Russia and Armenia tied for 2nd.",r:[["Sweden","SE",null,null,68],["Russia","RU",null,null,116],["Armenia","AM",null,null,116],["Romania","RO",null,null,19],["Serbia","RS",null,null,34],["Georgia","GE",null,null,68],["Netherlands","NL",null,null,121],["Cyprus","CY",null,null,32],["Malta","MT",null,null,55],["Ukraine","UA",null,null,89],["Belgium","BE",null,null,113],["Belarus","BY",null,null,48],["North Macedonia","MK",null,null,31]]},
+2010:{c:1,note:"Minsk, 20 Nov 2010 \u00b7 50% jury / 50% televote blend. Armenia\u2019s first win.",r:[["Lithuania","LT",null,null,67],["Moldova","MD",null,null,54],["Netherlands","NL",null,null,52],["Serbia","RS",null,null,113],["Ukraine","UA",null,null,28],["Sweden","SE",null,null,48],["Russia","RU",null,null,119],["Latvia","LV",null,null,51],["Belgium","BE",null,null,61],["Armenia","AM",null,null,120],["Malta","MT",null,null,35],["Belarus","BY",null,null,85],["Georgia","GE",null,null,109],["North Macedonia","MK",null,null,38]]},
+2011:{c:1,note:"Yerevan, 3 Dec 2011 \u00b7 50% jury / 50% televote, combined into one score. Belarus placed 3rd and Macedonia 12th on the tiebreak (points from more countries).",r:[["Georgia","GE",null,null,108],["Netherlands","NL",null,null,103],["Belarus","BY",null,null,99],["Russia","RU",null,null,99],["Armenia","AM",null,null,85],["Moldova","MD",null,null,78],["Belgium","BE",null,null,64],["Bulgaria","BG",null,null,60],["Sweden","SE",null,null,57],["Lithuania","LT",null,null,53],["Ukraine","UA",null,null,42],["North Macedonia","MK",null,null,31],["Latvia","LV",null,null,31]]},
+2012:{c:1,x:["Kids\u2019 Jury"],note:"Amsterdam, 1 Dec 2012 \u00b7 National jury/televote combined per country, plus a countryless Kids\u2019 Jury. Ukraine\u2019s 35-point margin was a record.",r:[["Belarus","BY",null,null,56,1],["Sweden","SE",null,null,70,6],["Azerbaijan","AZ",null,null,49,2],["Belgium","BE",null,null,72,3],["Russia","RU",null,null,88,8],["Israel","IL",null,null,68,4],["Albania","AL",null,null,35,null],["Armenia","AM",null,null,98,5],["Ukraine","UA",null,null,138,10],["Georgia","GE",null,null,103,12],["Moldova","MD",null,null,52,null],["Netherlands","NL",null,null,69,7]]},
+2013:{c:1,x:["Kids\u2019 Jury"],note:"Kyiv, 30 Nov 2013 \u00b7 National jury/televote combined per country, plus a countryless Kids\u2019 Jury. Malta\u2019s first win.",r:[["Sweden","SE",null,null,46,1],["Azerbaijan","AZ",null,null,66,4],["Armenia","AM",null,null,69,3],["San Marino","SM",null,null,42,5],["North Macedonia","MK",null,null,19,null],["Ukraine","UA",null,null,121,8],["Belarus","BY",null,null,108,10],["Moldova","MD",null,null,41,null],["Georgia","GE",null,null,91,7],["Netherlands","NL",null,null,59,2],["Malta","MT",null,null,130,12],["Russia","RU",null,null,106,6]]},
+2014:{c:1,note:"Malta, 15 Nov 2014 \u00b7 National jury/televote combined per country, plus a Kids\u2019 Jury whose points I could not reliably read from the source table, so they are not shown (they are included in each total). Italy won on its debut.",r:[["Belarus","BY",null,null,71],["Bulgaria","BG",null,null,147],["San Marino","SM",null,null,21],["Croatia","HR",null,null,13],["Cyprus","CY",null,null,69],["Georgia","GE",null,null,54],["Sweden","SE",null,null,28],["Ukraine","UA",null,null,74],["Slovenia","SI",null,null,29],["Montenegro","ME",null,null,24],["Italy","IT",null,null,159],["Armenia","AM",null,null,146],["Russia","RU",null,null,96],["Serbia","RS",null,null,61],["Malta","MT",null,null,116],["Netherlands","NL",null,null,70]]},
+2015:{c:1,note:"Sofia, 21 Nov 2015 \u00b7 National jury/televote combined per country, plus a Kids\u2019 Jury whose points I could not reliably read from the source table (they are included in each total). Malta\u2019s 185 points were then a record.",r:[["Malta","MT",null,null,185],["Armenia","AM",null,null,176],["Slovenia","SI",null,null,112],["Belarus","BY",null,null,105],["Albania","AL",null,null,93],["Russia","RU",null,null,80],["Serbia","RS",null,null,79],["Australia","AU",null,null,64],["Bulgaria","BG",null,null,62],["Georgia","GE",null,null,51],["Ukraine","UA",null,null,38],["Ireland","IE",null,null,36],["Montenegro","ME",null,null,36],["San Marino","SM",null,null,36],["Netherlands","NL",null,null,35],["Italy","IT",null,null,34],["North Macedonia","MK",null,null,26]]},
+2016:{c:1,nc:1,x:["Adult jury","Expert jury","Kids\u2019 jury"],note:"Valletta, 20 Nov 2016 \u00b7 No televote. Each country\u2019s Adult jury and Kids\u2019 jury awarded points, plus a countryless Expert jury (Christer Bj\u00f6rkman, Mads Grimstad, Jedward). Georgia won the Adult jury, Armenia the Kids\u2019 jury and Russia the Expert jury.",r:[["Georgia","GE",null,null,239,144,12,83],["Armenia","AM",null,null,232,99,23,110],["Italy","IT",null,null,209,84,22,103],["Russia","RU",null,null,202,68,29,105],["Australia","AU",null,null,202,86,17,99],["Malta","MT",null,null,191,80,6,105],["Belarus","BY",null,null,177,92,20,65],["Netherlands","NL",null,null,174,94,15,65],["Bulgaria","BG",null,null,161,78,15,68],["Ireland","IE",null,null,122,56,9,57],["Poland","PL",null,null,60,21,3,36],["North Macedonia","MK",null,null,41,17,0,24],["Albania","AL",null,null,38,23,2,13],["Ukraine","UA",null,null,30,18,0,12],["Israel","IL",null,null,27,6,1,20],["Cyprus","CY",null,null,27,15,0,12],["Serbia","RS",null,null,14,5,0,9]]},
+2017:{tl:"Online vote",note:"Tbilisi, 26 Nov 2017 \u00b7 50% national jury (3 professionals + 2 kids), 50% international online vote. Georgia won the jury, the Netherlands the online vote, Russia the contest.",r:[["Russia","RU",122,66,188],["Georgia","GE",143,42,185],["Australia","AU",93,79,172],["Netherlands","NL",44,112,156],["Belarus","BY",80,69,149],["Armenia","AM",92,56,148],["Ukraine","UA",80,67,147],["Poland","PL",77,61,138],["Malta","MT",26,81,107],["Serbia","RS",48,44,92],["Italy","IT",37,49,86],["North Macedonia","MK",28,41,69],["Albania","AL",32,35,67],["Portugal","PT",9,45,54],["Ireland","IE",12,42,54],["Cyprus","CY",5,40,45]]},
+2018:{tl:"Online vote",note:"Minsk, 25 Nov 2018 \u00b7 50% national jury, 50% international online vote. Poland won the contest and the online vote; Australia won the jury. Poland\u2019s first victory, with a record 20 countries competing.",r:[["Poland","PL",79,136,215],["France","FR",86,117,203],["Australia","AU",148,53,201],["Ukraine","UA",104,78,182],["Malta","MT",138,43,181],["Kazakhstan","KZ",68,103,171],["Italy","IT",94,57,151],["Georgia","GE",105,39,144],["Armenia","AM",55,70,125],["Russia","RU",60,62,122],["Belarus","BY",61,53,114],["North Macedonia","MK",64,35,99],["Netherlands","NL",23,68,91],["Israel","IL",34,47,81],["Ireland","IE",12,36,48],["Azerbaijan","AZ",17,30,47],["Albania","AL",10,34,44],["Portugal","PT",0,42,42],["Serbia","RS",2,28,30],["Wales","WA",0,29,29]]},
+2019:{tl:"Online vote",note:"Gliwice, 24 Nov 2019 \u00b7 50% national jury, 50% online vote. Kazakhstan won the jury; Poland won the online vote and the contest, the first back-to-back winner and the first to win on home soil.",r:[["Poland","PL",112,166,278],["Kazakhstan","KZ",148,79,227],["Spain","ES",108,104,212],["Netherlands","NL",105,81,186],["France","FR",85,84,169],["North Macedonia","MK",100,50,150],["Italy","IT",65,64,129],["Australia","AU",82,39,121],["Armenia","AM",70,45,115],["Serbia","RS",46,63,109],["Belarus","BY",44,48,92],["Ireland","IE",39,34,73],["Russia","RU",15,57,72],["Georgia","GE",37,32,69],["Ukraine","UA",28,31,59],["Portugal","PT",0,43,43],["Albania","AL",7,29,36],["Wales","WA",9,26,35],["Malta","MT",2,27,29]]},
+2020:{tl:"Online vote",note:"Warsaw, 29 Nov 2020 \u00b7 Performances were recorded remotely because of COVID-19. France won both the jury and the online vote. Germany debuted; Armenia withdrew before the show.",r:[["France","FR",88,112,200],["Kazakhstan","KZ",83,69,152],["Spain","ES",60,73,133],["Netherlands","NL",68,64,132],["Belarus","BY",73,57,130],["Georgia","GE",69,42,111],["Ukraine","UA",52,54,106],["Malta","MT",51,49,100],["Poland","PL",46,44,90],["Russia","RU",44,44,88],["Serbia","RS",35,50,85],["Germany","DE",27,39,66]]},
+2021:{tl:"Online vote",note:"Paris, 19 Dec 2021 \u00b7 50% national jury, 50% online vote. France won the jury; Armenia won the online vote and the contest. Belarus missed the contest for the first time.",r:[["Armenia","AM",115,109,224],["Poland","PL",116,102,218],["France","FR",120,67,187],["Georgia","GE",104,59,163],["Azerbaijan","AZ",109,42,151],["Ukraine","UA",62,63,125],["Russia","RU",74,50,124],["Kazakhstan","KZ",64,57,121],["North Macedonia","MK",55,59,114],["Italy","IT",60,47,107],["Portugal","PT",9,92,101],["Malta","MT",47,50,97],["Serbia","RS",24,62,86],["Albania","AL",45,39,84],["Spain","ES",30,47,77],["Bulgaria","BG",39,38,77],["Germany","DE",15,46,61],["Ireland","IE",5,39,44],["Netherlands","NL",9,34,43]]},
+2022:{tl:"Online vote",note:"Yerevan, 11 Dec 2022 \u00b7 50% national jury, 50% online vote. France won the jury; the United Kingdom won the online vote. Poland ranks 10th and Italy 11th on the 95-point tiebreak.",r:[["France","FR",132,71,203],["Armenia","AM",110,70,180],["Georgia","GE",114,47,161],["Ireland","IE",88,62,150],["United Kingdom","GB",66,80,146],["Spain","ES",59,78,137],["Netherlands","NL",58,70,128],["Portugal","PT",51,70,121],["Ukraine","UA",47,64,111],["Poland","PL",42,53,95],["Italy","IT",42,53,95],["Albania","AL",51,43,94],["Serbia","RS",41,51,92],["North Macedonia","MK",12,42,54],["Kazakhstan","KZ",5,42,47],["Malta","MT",10,33,43]]},
+2023:{tl:"Online vote",note:"Nice, 26 Nov 2023 \u00b7 50% national jury, 50% online vote. France won both and became the second country to win back-to-back. Estonia debuted.",
+2025:{tl:"Online vote",note:"Tbilisi, 13 Dec 2025 \u00b7 50% national jury, 50% online vote. France won the jury and the contest (its fourth win in six years); Ukraine won the online vote. Italy ranks 12th and Portugal 13th on the 73-point tie.",r:[["France","FR",152,96,248],["Ukraine","UA",79,98,177],["Georgia","GE",121,55,176],["Armenia","AM",117,58,175],["Spain","ES",98,54,152],["Albania","AL",60,85,145],["North Macedonia","MK",92,49,141],["Poland","PL",72,67,139],["San Marino","SM",38,87,125],["Netherlands","NL",47,46,93],["Malta","MT",54,38,92],["Italy","IT",26,47,73],["Portugal","PT",32,41,73],["Croatia","HR",28,42,70],["Azerbaijan","AZ",12,54,66],["Cyprus","CY",3,47,50],["Montenegro","ME",10,39,49],["Ireland","IE",3,41,44]]},
+2024:{tl:"Online vote",note:"Madrid, 16 Nov 2024 \u00b7 50% national jury, 50% online vote. Georgia won the jury; Portugal won the online vote and finished 2nd. Estonia ranks 14th and Ireland 15th on a 55-point tie because Estonia got more online points.",r:[["Georgia","GE",180,59,239],["Portugal","PT",96,117,213],["Ukraine","UA",122,81,203],["France","FR",103,74,177],["Malta","MT",74,79,153],["Spain","ES",80,64,144],["Albania","AL",82,44,126],["Armenia","AM",76,49,125],["Italy","IT",52,46,98],["Netherlands","NL",34,57,91],["Germany","DE",14,57,71],["Poland","PL",13,48,61],["Cyprus","CY",10,50,60],["Estonia","EE",14,41,55],["Ireland","IE",15,40,55],["North Macedonia","MK",20,34,54],["San Marino","SM",1,46,47]]}
+};
+const W=[[2003,"HR","Croatia","Dino Jelusić","Ti si moja prva ljubav"],[2004,"ES","Spain","María Isabel","Antes muerta que sencilla"],[2005,"BY","Belarus","Ksenia Sitnik","My vmeste"],[2006,"RU","Russia","Tolmachevy Twins","Vesenniy Jazz"],[2007,"BY","Belarus","Alexey Zhigalkovich","S druz'yami"],[2008,"GE","Georgia","Bzikebi","Bzz…"],[2009,"NL","Netherlands","Ralf Mackenbach","Click Clack"],[2010,"AM","Armenia","Vladimir Arzumanyan","Mama"],[2011,"GE","Georgia","CANDY","Candy Music"],[2012,"UA","Ukraine","Anastasiya Petryk","Nebo"],[2013,"MT","Malta","Gaia Cauchi","The Start"],[2014,"IT","Italy","Vincenzo Cantiello","Tu primo grande amore"],[2015,"MT","Malta","Destiny Chukunyere","Not My Soul"],[2016,"GE","Georgia","Mariam Mamadashvili","Mzeo"],[2017,"RU","Russia","Polina Bogusevich","Wings"],[2018,"PL","Poland","Roksana Węgiel","Anyone I Want to Be"],[2019,"PL","Poland","Viki Gabor","Superhero"],[2020,"FR","France","Valentina","J'imagine"],[2021,"AM","Armenia","Maléna","Qami Qami"],[2022,"FR","France","Lissandro","Oh Maman!"],[2023,"FR","France","Zoé Clauzure","Cœur"],[2024,"GE","Georgia","Andria Putkaradze","To My Mom"],[2025,"FR","France","Lou Deleuze","Ce Monde"]];
+let key="tot",desc=true;
+const yr=document.getElementById("yr");
+Object.keys(D).sort().reverse().forEach(y=>yr.add(new Option(y,y)));
+const tot=r=>r[4]!=null?r[4]:(r[2]!=null&&r[3]!=null?r[2]+r[3]:null);
+const cols=d=>{const c=[];if(!d.c)c.push(["j","Jury",2],["t",d.tl||"Televote",3]);(d.x||[]).forEach((n,i)=>c.push(["x"+i,n,5+i]));c.push(["tot","Total",null]);return c};
+function draw(){
+ const d=D[yr.value],cs=cols(d),rs=d.r.slice();
+  if(!cs.some(c=>c[0]==key))key="tot";
+   const val=r=>{const c=cs.find(x=>x[0]==key);return c[2]==null?tot(r):r[c[2]]};
+    rs.sort((a,b)=>{const x=val(a),y=val(b);if(x==null&&y==null)return 0;if(x==null)return 1;if(y==null)return -1;return desc?y-x:x-y});
+     const mx=Math.max(...rs.map(r=>tot(r)||0));
+      th.innerHTML="<tr><th>#</th><th>Country</th>"+cs.map(c=>"<th>"+c[1]+"</th>").join("")+"</tr>";
+       rows.innerHTML=rs.map((r,i)=>{
+         const cells=cs.map(c=>{const v=c[2]==null?tot(r):r[c[2]];const h=key==c[0]?' class="hl"':'';
+            return `<td${h}>${v==null?"\u2014":(c[0]=="tot"?`<span class="bar" style="width:${v/mx*60}px;background:var(--a)"></span>`:"")+v}</td>`}).join("");
+              return `<tr><td>${i+1}</td><td><span class="fl">${fi(r[1])}</span> ${r[0]}<span class="cc">${r[1]}</span></td>${cells}</tr>`}).join("");
+               nt.textContent=d.note+(d.c&&!d.nc?" Jury and televote scores were combined into one result, so no separate split is shown.":"");
+                btns.innerHTML=cs.map(c=>`<button data-k="${c[0]}" class="${key==c[0]?"on":""}">${c[1]}</button>`).join("");
+                 btns.querySelectorAll("button").forEach(b=>b.onclick=()=>{key=b.dataset.k;draw()});
+                  dir.textContent=desc?"High \u2192 Low":"Low \u2192 High";
+                  }
+                  dir.onclick=()=>{desc=!desc;draw()};yr.onchange=draw;
+                  win.innerHTML=W.slice().reverse().map(w=>`<tr><td>${w[0]}</td><td><span class="fl">${fi(w[1])}</span> ${w[2]}<span class="cc">${w[1]}</span></td><td class="w" style="text-align:left">${w[3]}</td><td class="w" style="text-align:left">${w[4]}</td></tr>`).join("");
+                  draw();
+                  </script>
+                  </body>
+                  </html>
+                   
